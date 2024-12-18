@@ -17,4 +17,15 @@ function add (numbers){
 
    let nums = numbers.split(seprator).filter(Boolean).map(Number);
 
+   let sum=0;
+   
+    for (let n of nums) {
+        if (n < 0) neg.push(n);
+        else sum += n;
+    }
+
+   return sum;
+
 }
+
+module.exports = add;
