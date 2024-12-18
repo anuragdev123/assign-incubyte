@@ -13,4 +13,6 @@ function add (numbers){
         numbers = numbers.substring(idx + 1);
     }
 
+    numbers = numbers.replace(/\n/g, seprator);
+
 }
