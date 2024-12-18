@@ -5,4 +5,12 @@ function add (numbers){
 
     if (neg.length) throw new Error(`Negative numbers not allowed: ${neg.join(', ')}`);
 
+    let seprator = ',';
+
+    if (numbers.startsWith("//")) {
+        let idx = numbers.indexOf('\n');
+        seprator = numbers.substring(2, idx);
+        numbers = numbers.substring(idx + 1);
+    }
+
 }
