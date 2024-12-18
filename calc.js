@@ -3,8 +3,7 @@ function add (numbers){
 
    let neg = [];
 
-    if (neg.length) throw new Error(`Negative numbers not allowed: ${neg.join(', ')}`);
-
+    
     let seprator = ',';
 
     if (numbers.startsWith("//")) {
@@ -23,6 +22,9 @@ function add (numbers){
         if (n < 0) neg.push(n);
         else sum += n;
     }
+
+   if (neg.length) throw new Error(`Negative numbers not allowed: ${neg.join(', ')}`);
+
 
    return sum;
 
