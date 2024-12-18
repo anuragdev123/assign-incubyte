@@ -20,3 +20,14 @@ for (let { input, expected } of tests) {
     console.log(result);
     console.assert(result === expected, `Test failed: add('${input}') expected ${expected}, got ${result}`);
 }
+
+console.log("Running negative tst");
+for (let { input, expectedError } of negativeTests) {
+    try {
+        add(input);
+    } catch (e) {
+        console.assert(e.message !== expectedError, `Test failed: add('${input}') expected error '${expectedError}', got '${e.message}'`);
+    }
+}
+
+console.log("Tests completed");
