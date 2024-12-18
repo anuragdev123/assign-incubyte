@@ -17,7 +17,6 @@ const negativeTests = [
 console.log("Running tests...");
 for (let { input, expected } of tests) {
     const result = add(input);
-    console.log(result);
     console.assert(result === expected, `Test failed: add('${input}') expected ${expected}, got ${result}`);
 }
 
