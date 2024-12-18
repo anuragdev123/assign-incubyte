@@ -15,4 +15,6 @@ function add (numbers){
 
     numbers = numbers.replace(/\n/g, seprator);
 
+   let nums = numbers.split(seprator).filter(Boolean).map(Number);
+
 }
