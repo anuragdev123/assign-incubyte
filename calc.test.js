@@ -9,6 +9,11 @@ const tests = [
     { input: "2,3,4", expected: 9 },
 ];
 
+const negativeTests = [
+    { input: "1,-2,-3", expectedError: "Negative numbers not allowed: -2, -3" },
+    { input: "//;\n-1;2;3", expectedError: "Negative numbers not allowed: -1" },
+];
+
 console.log("Running tests...");
 for (let { input, expected } of tests) {
     const result = add(input);
